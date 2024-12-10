@@ -29,6 +29,6 @@ export const BasicWithInitials: Story = {
 		square: false,
 		alt: "profile picture of Jane Doe",
 		title: "Jane Doe",
-		className: "size-12 bg-slate-800",
+		className: "size-12 bg-slate-500",
 	},
 };
