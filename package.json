@@ -13,6 +13,8 @@
 	"dependencies": {
 		"@biomejs/biome": "^1.9.4",
 		"@headlessui/react": "^2.2.0",
+		"@heroicons/react": "^2.2.0",
+		"framer-motion": "^11.13.5",
 		"next": "15.0.4",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0"
