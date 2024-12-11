@@ -30,7 +30,7 @@ import InstitutionSelector from "@/components/institution-selector";
 export default function Sidebar({
   pathname,
   institutions,
-}: { activeItem: string, institutions: {id: number, name: string, avatar_url: string | null | undefined}[] }) {
+}: { pathname: string, institutions: {id: number, name: string, avatar_url: string | null | undefined}[] }) {
   const sidebarItems = [
     {
       href: "/",
