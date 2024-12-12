@@ -19,7 +19,9 @@
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"recommended": true
+			"style": {
+				"useImportType": "off"
+			}
 		}
 	},
 	"javascript": {

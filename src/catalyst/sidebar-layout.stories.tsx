@@ -3,6 +3,19 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { SidebarLayout } from "@/catalyst/sidebar-layout";
 import { Navbar } from "@/catalyst/navbar";
 import Sidebar from "@/components/sidebar";
+import {
+	Cog6ToothIcon,
+	HomeIcon,
+	InboxIcon,
+	MagnifyingGlassIcon,
+	MegaphoneIcon,
+	QuestionMarkCircleIcon,
+	SparklesIcon,
+	Square2StackIcon,
+	TicketIcon,
+	UsersIcon,
+} from "@heroicons/react/20/solid";
+import React from "react";
 
 const meta: Meta<typeof SidebarLayout> = {
 	title: "Catalyst/Sidebar Layout",
@@ -18,7 +31,82 @@ export const Initial: Story = {
 		navbar: Navbar({}),
 		sidebar: Sidebar({
 			pathname: "/",
-			institutions: [],
+			workspaces: [],
+			topNavLinks: [
+				{
+					href: "/search",
+					label: "Search",
+					icon: <MagnifyingGlassIcon />,
+				},
+				{
+					href: "/inbox",
+					label: "Inbox",
+					icon: <InboxIcon />,
+				},
+			],
+			mainNavLinks: [
+				{
+					href: "/",
+					label: "Home",
+					icon: <HomeIcon />,
+				},
+				{
+					href: "/events",
+					label: "Events",
+					icon: <Square2StackIcon />,
+				},
+				{
+					href: "/orders",
+					label: "Orders",
+					icon: <TicketIcon />,
+				},
+				{
+					href: "/settings",
+					label: "Settings",
+					icon: <Cog6ToothIcon />,
+				},
+				{
+					href: "/broadcasts",
+					label: "Broadcasts",
+					icon: <MegaphoneIcon />,
+				},
+				{
+					href: "/users",
+					label: "Users",
+					icon: <UsersIcon />,
+				},
+			],
+			shortcutsLabel: "Upcoming Events",
+			shortcuts: [
+				{
+					href: "/events/1",
+					label: "Bear Hug: Live in Concert",
+				},
+				{
+					href: "/events/2",
+					label: "Viking People",
+				},
+				{
+					href: "/events/3",
+					label: "Six Fingers — DJ Set",
+				},
+				{
+					href: "/events/4",
+					label: "We All Look The Same",
+				},
+			],
+			bottomNavLinks: [
+				{
+					href: "/support",
+					label: "Support",
+					icon: <QuestionMarkCircleIcon />,
+				},
+				{
+					href: "/changelog",
+					label: "Changelog",
+					icon: <SparklesIcon />,
+				},
+			],
 		}),
 	},
 };
@@ -29,12 +117,87 @@ export const WithAWorkspace: Story = {
 		navbar: Navbar({}),
 		sidebar: Sidebar({
 			pathname: "/",
-			institutions: [
+			workspaces: [
 				{
-					id: 1,
+					id: "1",
 					name: "Acme Corp",
 					avatar_url:
 						"https://pbs.twimg.com/profile_images/1730334391501488129/G0R0sjHH_400x400.jpg",
+				},
+			],
+			topNavLinks: [
+				{
+					href: "/search",
+					label: "Search",
+					icon: <MagnifyingGlassIcon />,
+				},
+				{
+					href: "/inbox",
+					label: "Inbox",
+					icon: <InboxIcon />,
+				},
+			],
+			mainNavLinks: [
+				{
+					href: "/",
+					label: "Home",
+					icon: <HomeIcon />,
+				},
+				{
+					href: "/events",
+					label: "Events",
+					icon: <Square2StackIcon />,
+				},
+				{
+					href: "/orders",
+					label: "Orders",
+					icon: <TicketIcon />,
+				},
+				{
+					href: "/settings",
+					label: "Settings",
+					icon: <Cog6ToothIcon />,
+				},
+				{
+					href: "/broadcasts",
+					label: "Broadcasts",
+					icon: <MegaphoneIcon />,
+				},
+				{
+					href: "/users",
+					label: "Users",
+					icon: <UsersIcon />,
+				},
+			],
+			shortcutsLabel: "Upcoming Events",
+			shortcuts: [
+				{
+					href: "/events/1",
+					label: "Bear Hug: Live in Concert",
+				},
+				{
+					href: "/events/2",
+					label: "Viking People",
+				},
+				{
+					href: "/events/3",
+					label: "Six Fingers — DJ Set",
+				},
+				{
+					href: "/events/4",
+					label: "We All Look The Same",
+				},
+			],
+			bottomNavLinks: [
+				{
+					href: "/support",
+					label: "Support",
+					icon: <QuestionMarkCircleIcon />,
+				},
+				{
+					href: "/changelog",
+					label: "Changelog",
+					icon: <SparklesIcon />,
 				},
 			],
 		}),
@@ -47,12 +210,87 @@ export const SidebarActiveLink: Story = {
 		navbar: Navbar({}),
 		sidebar: Sidebar({
 			pathname: "/events",
-			institutions: [
+			workspaces: [
 				{
-					id: 1,
+					id: "1",
 					name: "Acme Corp",
 					avatar_url:
 						"https://pbs.twimg.com/profile_images/1730334391501488129/G0R0sjHH_400x400.jpg",
+				},
+			],
+			topNavLinks: [
+				{
+					href: "/search",
+					label: "Search",
+					icon: <MagnifyingGlassIcon />,
+				},
+				{
+					href: "/inbox",
+					label: "Inbox",
+					icon: <InboxIcon />,
+				},
+			],
+			mainNavLinks: [
+				{
+					href: "/",
+					label: "Home",
+					icon: <HomeIcon />,
+				},
+				{
+					href: "/events",
+					label: "Events",
+					icon: <Square2StackIcon />,
+				},
+				{
+					href: "/orders",
+					label: "Orders",
+					icon: <TicketIcon />,
+				},
+				{
+					href: "/settings",
+					label: "Settings",
+					icon: <Cog6ToothIcon />,
+				},
+				{
+					href: "/broadcasts",
+					label: "Broadcasts",
+					icon: <MegaphoneIcon />,
+				},
+				{
+					href: "/users",
+					label: "Users",
+					icon: <UsersIcon />,
+				},
+			],
+			shortcutsLabel: "Upcoming Events",
+			shortcuts: [
+				{
+					href: "/events/1",
+					label: "Bear Hug: Live in Concert",
+				},
+				{
+					href: "/events/2",
+					label: "Viking People",
+				},
+				{
+					href: "/events/3",
+					label: "Six Fingers — DJ Set",
+				},
+				{
+					href: "/events/4",
+					label: "We All Look The Same",
+				},
+			],
+			bottomNavLinks: [
+				{
+					href: "/support",
+					label: "Support",
+					icon: <QuestionMarkCircleIcon />,
+				},
+				{
+					href: "/changelog",
+					label: "Changelog",
+					icon: <SparklesIcon />,
 				},
 			],
 		}),
@@ -65,18 +303,93 @@ export const WithMultipleWorkspaces: Story = {
 		navbar: Navbar({}),
 		sidebar: Sidebar({
 			pathname: "/",
-			institutions: [
+			workspaces: [
 				{
-					id: 1,
+					id: "1",
 					name: "Acme Corp",
 					avatar_url:
 						"https://pbs.twimg.com/profile_images/1730334391501488129/G0R0sjHH_400x400.jpg",
 				},
 				{
-					id: 2,
+					id: "2",
 					name: "Acme Ltd",
 					avatar_url:
 						"https://pbs.twimg.com/profile_images/1730334391501488129/G0R0sjHH_400x400.jpg",
+				},
+			],
+			topNavLinks: [
+				{
+					href: "/search",
+					label: "Search",
+					icon: <MagnifyingGlassIcon />,
+				},
+				{
+					href: "/inbox",
+					label: "Inbox",
+					icon: <InboxIcon />,
+				},
+			],
+			mainNavLinks: [
+				{
+					href: "/",
+					label: "Home",
+					icon: <HomeIcon />,
+				},
+				{
+					href: "/events",
+					label: "Events",
+					icon: <Square2StackIcon />,
+				},
+				{
+					href: "/orders",
+					label: "Orders",
+					icon: <TicketIcon />,
+				},
+				{
+					href: "/settings",
+					label: "Settings",
+					icon: <Cog6ToothIcon />,
+				},
+				{
+					href: "/broadcasts",
+					label: "Broadcasts",
+					icon: <MegaphoneIcon />,
+				},
+				{
+					href: "/users",
+					label: "Users",
+					icon: <UsersIcon />,
+				},
+			],
+			shortcutsLabel: "Upcoming Events",
+			shortcuts: [
+				{
+					href: "/events/1",
+					label: "Bear Hug: Live in Concert",
+				},
+				{
+					href: "/events/2",
+					label: "Viking People",
+				},
+				{
+					href: "/events/3",
+					label: "Six Fingers — DJ Set",
+				},
+				{
+					href: "/events/4",
+					label: "We All Look The Same",
+				},
+			],
+			bottomNavLinks: [
+				{
+					href: "/support",
+					label: "Support",
+					icon: <QuestionMarkCircleIcon />,
+				},
+				{
+					href: "/changelog",
+					label: "Changelog",
+					icon: <SparklesIcon />,
 				},
 			],
 		}),
