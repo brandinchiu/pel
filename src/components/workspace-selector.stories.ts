@@ -1,27 +1,32 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import Sidebar from "@/components/sidebar";
+import WorkspaceSelector from "@/components/workspace-selector";
 
-const meta: Meta<typeof Sidebar> = {
-	title: "Design System/Sidebar",
-	component: Sidebar,
+const meta: Meta<typeof WorkspaceSelector> = {
+	title: "Design System/Workspace Selector",
+	component: WorkspaceSelector,
 };
 
 export default meta;
 
-type Story = StoryObj<typeof Sidebar>;
+type Story = StoryObj<typeof WorkspaceSelector>;
 
 export const Initial: Story = {
+	args: {},
+};
+
+export const InitialWithDifferentLabel: Story = {
+	name: "With a different label",
 	args: {
-		pathname: "/",
-		workspaces: [],
+		label: "account",
 	},
 };
 
 export const WithAWorkspace: Story = {
 	name: "With a workspace",
 	args: {
-		pathname: "/",
+		label: "workspace",
+		activeWorkspaceId: "1",
 		workspaces: [
 			{
 				id: "1",
@@ -31,27 +36,12 @@ export const WithAWorkspace: Story = {
 			},
 		],
 	},
-};
-
-export const WithADifferentActiveLink: Story = {
-	args: {
-		pathname: "/events",
-		workspaces: [
-			{
-				id: "1",
-				name: "Acme Corp",
-				avatar_url:
-					"https://pbs.twimg.com/profile_images/1730334391501488129/G0R0sjHH_400x400.jpg",
-			},
-		],
-	},
-	name: "With a different active link",
 };
 
 export const WithMultipleWorkspaces: Story = {
 	name: "With multiple workspaces",
 	args: {
-		pathname: "/",
+		activeWorkspaceId: "1",
 		workspaces: [
 			{
 				id: "1",

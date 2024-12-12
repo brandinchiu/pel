@@ -7,7 +7,7 @@ const config: StorybookConfig = {
 		"@storybook/addon-essentials",
 		"@chromatic-com/storybook",
 		"@storybook/addon-interactions",
-		"storybook-addon-render-modes"
+		"storybook-addon-render-modes",
 	],
 	framework: {
 		name: "@storybook/nextjs",
