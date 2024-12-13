@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { ReactElement } from "react";
 import {
 	Dropdown,
 	DropdownButton,
@@ -20,47 +20,80 @@ import {
 } from "@heroicons/react/16/solid";
 import { SidebarItem } from "@/catalyst/sidebar";
 
-export default function AccountManager() {
+interface Props {
+	user?: {
+		full_name: string;
+		email: string;
+		avatar_url: string | null | undefined;
+	};
+	topNavLinks: {
+		href: string;
+		label: string;
+		icon: ReactElement<{ title?: string; titleId?: string }>;
+	}[];
+	bottomNavLinks: {
+		href: string;
+		label: string;
+		icon: ReactElement<{ title?: string; titleId?: string }>;
+	}[];
+}
+
+function getInitials(fullName?: string) {
+	if (!fullName) {
+		return "?";
+	}
+
+	const parts = fullName.split(" ");
+
+	return parts[0].charAt(0) + (parts.length > 1 ? parts[1].charAt(0) : "");
+}
+
+export default function AccountManager({
+	user,
+	topNavLinks,
+	bottomNavLinks,
+}: Props) {
 	return (
 		<Dropdown>
 			<DropdownButton as={SidebarItem}>
 				<span className="flex min-w-0 items-center gap-3">
 					<Avatar
-						src="https://randomuser.me/api/portraits/women/64.jpg"
+						src={user?.avatar_url}
+						initials={getInitials(user?.full_name)}
 						className="size-10"
 						square
 						alt=""
 					/>
 					<span className="min-w-0">
 						<span className="block truncate text-sm/5 font-medium text-zinc-950 dark:text-white">
-							{"Anonymous"}
+							{user?.full_name || "Anonymous"}
 						</span>
 						<span className="block truncate text-xs/5 font-normal text-zinc-500 dark:text-zinc-400">
-							{"john.doe@example.com"}
+							{user?.email}
 						</span>
 					</span>
 				</span>
 				<ChevronUpIcon />
 			</DropdownButton>
 			<DropdownMenu className="min-w-64" anchor="top start">
-				<DropdownItem href="/my-profile">
-					<UserIcon />
-					<DropdownLabel>My profile</DropdownLabel>
-				</DropdownItem>
-				<DropdownItem href="/settings">
-					<Cog8ToothIcon />
-					<DropdownLabel>Settings</DropdownLabel>
-				</DropdownItem>
-				<DropdownDivider />
-				<DropdownItem href="/privacy-policy">
-					<ShieldCheckIcon />
-					<DropdownLabel>Privacy policy</DropdownLabel>
-				</DropdownItem>
-				<DropdownItem href="/share-feedback">
-					<LightBulbIcon />
-					<DropdownLabel>Share feedback</DropdownLabel>
-				</DropdownItem>
-				<DropdownDivider />
+				{topNavLinks.map((item) => {
+					return (
+						<DropdownItem key={item.href} href={item.href}>
+							{item.icon}
+							<DropdownLabel>{item.label}</DropdownLabel>
+						</DropdownItem>
+					);
+				})}
+				{topNavLinks.length > 0 && <DropdownDivider />}
+				{bottomNavLinks.map((item) => {
+					return (
+						<DropdownItem key={item.href} href={item.href}>
+							{item.icon}
+							<DropdownLabel>{item.label}</DropdownLabel>
+						</DropdownItem>
+					);
+				})}
+				{bottomNavLinks.length > 0 && <DropdownDivider />}
 				<DropdownItem>
 					<ArrowRightStartOnRectangleIcon />
 					<DropdownLabel onClick={() => {}}>Sign out</DropdownLabel>

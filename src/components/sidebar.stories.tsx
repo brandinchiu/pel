@@ -46,21 +46,6 @@ export const WithAWorkspace: Story = {
 	},
 };
 
-export const WithADifferentActiveLink: Story = {
-	args: {
-		pathname: "/events",
-		workspaces: [
-			{
-				id: "1",
-				name: "Acme Corp",
-				avatar_url:
-					"https://pbs.twimg.com/profile_images/1730334391501488129/G0R0sjHH_400x400.jpg",
-			},
-		],
-	},
-	name: "With a different active link",
-};
-
 export const WithMultipleWorkspaces: Story = {
 	name: "With multiple workspaces",
 	args: {
@@ -131,6 +116,53 @@ export const WithMainLinks: Story = {
 				name: "Acme Limited",
 				avatar_url:
 					"https://pbs.twimg.com/profile_images/1260924852028026881/48VQXP0n_400x400.jpg",
+			},
+		],
+		mainNavLinks: [
+			{
+				href: "/",
+				label: "Home",
+				icon: <HomeIcon />,
+			},
+			{
+				href: "/events",
+				label: "Events",
+				icon: <Square2StackIcon />,
+			},
+			{
+				href: "/orders",
+				label: "Orders",
+				icon: <TicketIcon />,
+			},
+			{
+				href: "/settings",
+				label: "Settings",
+				icon: <Cog6ToothIcon />,
+			},
+			{
+				href: "/broadcasts",
+				label: "Broadcasts",
+				icon: <MegaphoneIcon />,
+			},
+			{
+				href: "/users",
+				label: "Users",
+				icon: <UsersIcon />,
+			},
+		],
+	},
+};
+
+export const WithADifferentActiveLink: Story = {
+	name: "With a different active link",
+	args: {
+		pathname: "/events",
+		workspaces: [
+			{
+				id: "1",
+				name: "Acme Corp",
+				avatar_url:
+					"https://pbs.twimg.com/profile_images/1730334391501488129/G0R0sjHH_400x400.jpg",
 			},
 		],
 		mainNavLinks: [
@@ -365,5 +397,10 @@ export const Full: Story = {
 				icon: <SparklesIcon />,
 			},
 		],
+		user: {
+			full_name: "Jane Doe",
+			email: "jane@example.com",
+			avatar_url: "https://randomuser.me/api/portraits/women/64.jpg",
+		},
 	},
 };
