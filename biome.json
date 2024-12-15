@@ -21,6 +21,9 @@
 		"rules": {
 			"style": {
 				"useImportType": "off"
+			},
+			"a11y": {
+				"noSvgWithoutTitle": "off"
 			}
 		}
 	},
