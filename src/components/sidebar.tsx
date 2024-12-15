@@ -12,12 +12,6 @@ import {
 } from "@/catalyst/sidebar";
 import AccountManager from "@/components/account-manager";
 import WorkspaceSelector from "@/components/workspace-selector";
-import {
-	Cog8ToothIcon,
-	LightBulbIcon,
-	ShieldCheckIcon,
-	UserIcon,
-} from "@heroicons/react/16/solid";
 
 interface Props {
 	pathname: string | undefined;
@@ -51,6 +45,16 @@ interface Props {
 		email: string;
 		avatar_url: string | null | undefined;
 	};
+	accountTopLinks: {
+		href: string;
+		label: string;
+		icon: ReactElement<{ title?: string; titleId?: string }>;
+	}[];
+	accountBottomLinks: {
+		href: string;
+		label: string;
+		icon: ReactElement<{ title?: string; titleId?: string }>;
+	}[];
 }
 
 export default function Sidebar({
@@ -62,6 +66,8 @@ export default function Sidebar({
 	shortcuts = [],
 	bottomNavLinks = [],
 	user,
+	accountTopLinks = [],
+	accountBottomLinks = []
 }: Props) {
 	return (
 		<CatalystSidebar>
@@ -144,30 +150,8 @@ export default function Sidebar({
 				{/* BOTTOM DROPDOWN */}
 				<AccountManager
 					user={user}
-					topNavLinks={[
-						{
-							href: "/my-profile",
-							label: "My profile",
-							icon: <UserIcon />,
-						},
-						{
-							href: "/settings",
-							label: "Settings",
-							icon: <Cog8ToothIcon />,
-						},
-					]}
-					bottomNavLinks={[
-						{
-							href: "/privacy-policy",
-							label: "Privacy policy",
-							icon: <ShieldCheckIcon />,
-						},
-						{
-							href: "/share-feedback",
-							label: "Share feedback",
-							icon: <LightBulbIcon />,
-						},
-					]}
+					topNavLinks={accountTopLinks}
+					bottomNavLinks={accountBottomLinks}
 				/>
 			</SidebarFooter>
 		</CatalystSidebar>

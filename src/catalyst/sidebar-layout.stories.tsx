@@ -16,6 +16,7 @@ import {
 	UsersIcon,
 } from "@heroicons/react/20/solid";
 import React from "react";
+import {Cog8ToothIcon, LightBulbIcon, ShieldCheckIcon, UserIcon} from "@heroicons/react/16/solid";
 
 const meta: Meta<typeof SidebarLayout> = {
 	title: "Catalyst/Sidebar Layout",
@@ -107,6 +108,35 @@ export const Initial: Story = {
 					icon: <SparklesIcon />,
 				},
 			],
+			user: {
+				full_name: "Jane Doe",
+				email: "jane@example.com",
+				avatar_url: "https://randomuser.me/api/portraits/women/64.jpg",
+			},
+			accountTopLinks: [
+				{
+					href: "/my-profile",
+					label: "My profile",
+					icon: <UserIcon />
+				},
+				{
+					href: "/settings",
+					label: "Settings",
+					icon: <Cog8ToothIcon />,
+				}
+			],
+			accountBottomLinks: [
+				{
+					href: "/privacy-policy",
+					label: "Privacy policy",
+					icon: <ShieldCheckIcon />,
+				},
+				{
+					href: "/share-feedback",
+					label: "Share feedback",
+					icon: <LightBulbIcon />,
+				},
+			]
 		}),
 	},
 };
@@ -200,6 +230,35 @@ export const WithAWorkspace: Story = {
 					icon: <SparklesIcon />,
 				},
 			],
+			user: {
+				full_name: "Jane Doe",
+				email: "jane@example.com",
+				avatar_url: "https://randomuser.me/api/portraits/women/64.jpg",
+			},
+			accountTopLinks: [
+				{
+					href: "/my-profile",
+					label: "My profile",
+					icon: <UserIcon />
+				},
+				{
+					href: "/settings",
+					label: "Settings",
+					icon: <Cog8ToothIcon />,
+				}
+			],
+			accountBottomLinks: [
+				{
+					href: "/privacy-policy",
+					label: "Privacy policy",
+					icon: <ShieldCheckIcon />,
+				},
+				{
+					href: "/share-feedback",
+					label: "Share feedback",
+					icon: <LightBulbIcon />,
+				},
+			]
 		}),
 	},
 };
@@ -293,6 +352,35 @@ export const SidebarActiveLink: Story = {
 					icon: <SparklesIcon />,
 				},
 			],
+			user: {
+				full_name: "Jane Doe",
+				email: "jane@example.com",
+				avatar_url: "https://randomuser.me/api/portraits/women/64.jpg",
+			},
+			accountTopLinks: [
+				{
+					href: "/my-profile",
+					label: "My profile",
+					icon: <UserIcon />
+				},
+				{
+					href: "/settings",
+					label: "Settings",
+					icon: <Cog8ToothIcon />,
+				}
+			],
+			accountBottomLinks: [
+				{
+					href: "/privacy-policy",
+					label: "Privacy policy",
+					icon: <ShieldCheckIcon />,
+				},
+				{
+					href: "/share-feedback",
+					label: "Share feedback",
+					icon: <LightBulbIcon />,
+				},
+			]
 		}),
 	},
 };
@@ -392,6 +480,35 @@ export const WithMultipleWorkspaces: Story = {
 					icon: <SparklesIcon />,
 				},
 			],
+			user: {
+				full_name: "Jane Doe",
+				email: "jane@example.com",
+				avatar_url: "https://randomuser.me/api/portraits/women/64.jpg",
+			},
+			accountTopLinks: [
+				{
+					href: "/my-profile",
+					label: "My profile",
+					icon: <UserIcon />
+				},
+				{
+					href: "/settings",
+					label: "Settings",
+					icon: <Cog8ToothIcon />,
+				}
+			],
+			accountBottomLinks: [
+				{
+					href: "/privacy-policy",
+					label: "Privacy policy",
+					icon: <ShieldCheckIcon />,
+				},
+				{
+					href: "/share-feedback",
+					label: "Share feedback",
+					icon: <LightBulbIcon />,
+				},
+			]
 		}),
 	},
 };

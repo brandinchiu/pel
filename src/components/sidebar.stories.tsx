@@ -14,6 +14,7 @@ import {
 	UsersIcon,
 } from "@heroicons/react/20/solid";
 import React from "react";
+import {Cog8ToothIcon, LightBulbIcon, ShieldCheckIcon, UserIcon} from "@heroicons/react/16/solid";
 
 const meta: Meta<typeof Sidebar> = {
 	title: "Design System/Sidebar",
@@ -28,6 +29,35 @@ export const Initial: Story = {
 	args: {
 		pathname: "/",
 		workspaces: [],
+		user: {
+			full_name: "Jane Doe",
+			email: "jane@example.com",
+			avatar_url: "https://randomuser.me/api/portraits/women/64.jpg",
+		},
+		accountTopLinks: [
+			{
+				href: "/my-profile",
+				label: "My profile",
+				icon: <UserIcon />
+			},
+			{
+				href: "/settings",
+				label: "Settings",
+				icon: <Cog8ToothIcon />,
+			}
+		],
+		accountBottomLinks: [
+			{
+				href: "/privacy-policy",
+				label: "Privacy policy",
+				icon: <ShieldCheckIcon />,
+			},
+			{
+				href: "/share-feedback",
+				label: "Share feedback",
+				icon: <LightBulbIcon />,
+			},
+		]
 	},
 };
 
@@ -43,6 +73,35 @@ export const WithAWorkspace: Story = {
 					"https://pbs.twimg.com/profile_images/1730334391501488129/G0R0sjHH_400x400.jpg",
 			},
 		],
+		user: {
+			full_name: "Jane Doe",
+			email: "jane@example.com",
+			avatar_url: "https://randomuser.me/api/portraits/women/64.jpg",
+		},
+		accountTopLinks: [
+			{
+				href: "/my-profile",
+				label: "My profile",
+				icon: <UserIcon />
+			},
+			{
+				href: "/settings",
+				label: "Settings",
+				icon: <Cog8ToothIcon />,
+			}
+		],
+		accountBottomLinks: [
+			{
+				href: "/privacy-policy",
+				label: "Privacy policy",
+				icon: <ShieldCheckIcon />,
+			},
+			{
+				href: "/share-feedback",
+				label: "Share feedback",
+				icon: <LightBulbIcon />,
+			},
+		]
 	},
 };
 
@@ -64,6 +123,35 @@ export const WithMultipleWorkspaces: Story = {
 					"https://pbs.twimg.com/profile_images/1260924852028026881/48VQXP0n_400x400.jpg",
 			},
 		],
+		user: {
+			full_name: "Jane Doe",
+			email: "jane@example.com",
+			avatar_url: "https://randomuser.me/api/portraits/women/64.jpg",
+		},
+		accountTopLinks: [
+			{
+				href: "/my-profile",
+				label: "My profile",
+				icon: <UserIcon />
+			},
+			{
+				href: "/settings",
+				label: "Settings",
+				icon: <Cog8ToothIcon />,
+			}
+		],
+		accountBottomLinks: [
+			{
+				href: "/privacy-policy",
+				label: "Privacy policy",
+				icon: <ShieldCheckIcon />,
+			},
+			{
+				href: "/share-feedback",
+				label: "Share feedback",
+				icon: <LightBulbIcon />,
+			},
+		]
 	},
 };
 
@@ -97,6 +185,35 @@ export const WithTopLinks: Story = {
 				icon: <InboxIcon />,
 			},
 		],
+		user: {
+			full_name: "Jane Doe",
+			email: "jane@example.com",
+			avatar_url: "https://randomuser.me/api/portraits/women/64.jpg",
+		},
+		accountTopLinks: [
+			{
+				href: "/my-profile",
+				label: "My profile",
+				icon: <UserIcon />
+			},
+			{
+				href: "/settings",
+				label: "Settings",
+				icon: <Cog8ToothIcon />,
+			}
+		],
+		accountBottomLinks: [
+			{
+				href: "/privacy-policy",
+				label: "Privacy policy",
+				icon: <ShieldCheckIcon />,
+			},
+			{
+				href: "/share-feedback",
+				label: "Share feedback",
+				icon: <LightBulbIcon />,
+			},
+		]
 	},
 };
 
@@ -150,6 +267,35 @@ export const WithMainLinks: Story = {
 				icon: <UsersIcon />,
 			},
 		],
+		user: {
+			full_name: "Jane Doe",
+			email: "jane@example.com",
+			avatar_url: "https://randomuser.me/api/portraits/women/64.jpg",
+		},
+		accountTopLinks: [
+			{
+				href: "/my-profile",
+				label: "My profile",
+				icon: <UserIcon />
+			},
+			{
+				href: "/settings",
+				label: "Settings",
+				icon: <Cog8ToothIcon />,
+			}
+		],
+		accountBottomLinks: [
+			{
+				href: "/privacy-policy",
+				label: "Privacy policy",
+				icon: <ShieldCheckIcon />,
+			},
+			{
+				href: "/share-feedback",
+				label: "Share feedback",
+				icon: <LightBulbIcon />,
+			},
+		]
 	},
 };
 
@@ -197,6 +343,35 @@ export const WithADifferentActiveLink: Story = {
 				icon: <UsersIcon />,
 			},
 		],
+		user: {
+			full_name: "Jane Doe",
+			email: "jane@example.com",
+			avatar_url: "https://randomuser.me/api/portraits/women/64.jpg",
+		},
+		accountTopLinks: [
+			{
+				href: "/my-profile",
+				label: "My profile",
+				icon: <UserIcon />
+			},
+			{
+				href: "/settings",
+				label: "Settings",
+				icon: <Cog8ToothIcon />,
+			}
+		],
+		accountBottomLinks: [
+			{
+				href: "/privacy-policy",
+				label: "Privacy policy",
+				icon: <ShieldCheckIcon />,
+			},
+			{
+				href: "/share-feedback",
+				label: "Share feedback",
+				icon: <LightBulbIcon />,
+			},
+		]
 	},
 };
 
@@ -268,6 +443,35 @@ export const WithShortcutLinks: Story = {
 				label: "We All Look The Same",
 			},
 		],
+		user: {
+			full_name: "Jane Doe",
+			email: "jane@example.com",
+			avatar_url: "https://randomuser.me/api/portraits/women/64.jpg",
+		},
+		accountTopLinks: [
+			{
+				href: "/my-profile",
+				label: "My profile",
+				icon: <UserIcon />
+			},
+			{
+				href: "/settings",
+				label: "Settings",
+				icon: <Cog8ToothIcon />,
+			}
+		],
+		accountBottomLinks: [
+			{
+				href: "/privacy-policy",
+				label: "Privacy policy",
+				icon: <ShieldCheckIcon />,
+			},
+			{
+				href: "/share-feedback",
+				label: "Share feedback",
+				icon: <LightBulbIcon />,
+			},
+		]
 	},
 };
 
@@ -301,6 +505,35 @@ export const WithBottomLinks: Story = {
 				icon: <SparklesIcon />,
 			},
 		],
+		user: {
+			full_name: "Jane Doe",
+			email: "jane@example.com",
+			avatar_url: "https://randomuser.me/api/portraits/women/64.jpg",
+		},
+		accountTopLinks: [
+			{
+				href: "/my-profile",
+				label: "My profile",
+				icon: <UserIcon />
+			},
+			{
+				href: "/settings",
+				label: "Settings",
+				icon: <Cog8ToothIcon />,
+			}
+		],
+		accountBottomLinks: [
+			{
+				href: "/privacy-policy",
+				label: "Privacy policy",
+				icon: <ShieldCheckIcon />,
+			},
+			{
+				href: "/share-feedback",
+				label: "Share feedback",
+				icon: <LightBulbIcon />,
+			},
+		]
 	},
 };
 
@@ -402,5 +635,29 @@ export const Full: Story = {
 			email: "jane@example.com",
 			avatar_url: "https://randomuser.me/api/portraits/women/64.jpg",
 		},
+		accountTopLinks: [
+			{
+				href: "/my-profile",
+				label: "My profile",
+				icon: <UserIcon />
+			},
+			{
+				href: "/settings",
+				label: "Settings",
+				icon: <Cog8ToothIcon />,
+			}
+		],
+		accountBottomLinks: [
+			{
+				href: "/privacy-policy",
+				label: "Privacy policy",
+				icon: <ShieldCheckIcon />,
+			},
+			{
+				href: "/share-feedback",
+				label: "Share feedback",
+				icon: <LightBulbIcon />,
+			},
+		]
 	},
 };

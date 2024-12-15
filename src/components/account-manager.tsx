@@ -12,11 +12,7 @@ import {
 import { Avatar } from "@/catalyst/avatar";
 import {
 	ArrowRightStartOnRectangleIcon,
-	ChevronUpIcon,
-	Cog8ToothIcon,
-	LightBulbIcon,
-	ShieldCheckIcon,
-	UserIcon,
+	ChevronUpIcon
 } from "@heroicons/react/16/solid";
 import { SidebarItem } from "@/catalyst/sidebar";
 
@@ -38,7 +34,12 @@ interface Props {
 	}[];
 }
 
-function getInitials(fullName?: string) {
+/**
+ * returns initials used by user avatar.
+ * @param fullName
+ * @return string
+ */
+function getInitials(fullName?: string): string {
 	if (!fullName) {
 		return "?";
 	}
@@ -94,9 +95,9 @@ export default function AccountManager({
 					);
 				})}
 				{bottomNavLinks.length > 0 && <DropdownDivider />}
-				<DropdownItem>
+				<DropdownItem href="/auth/signout">
 					<ArrowRightStartOnRectangleIcon />
-					<DropdownLabel onClick={() => {}}>Sign out</DropdownLabel>
+					<DropdownLabel>Sign out</DropdownLabel>
 				</DropdownItem>
 			</DropdownMenu>
 		</Dropdown>
