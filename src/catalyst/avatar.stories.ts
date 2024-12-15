@@ -5,6 +5,12 @@ import { Avatar } from "./avatar";
 const meta: Meta<typeof Avatar> = {
 	title: "Catalyst/Avatar",
 	component: Avatar,
+	tags: ["autodocs"],
+	parameters: {
+		docs: {
+			subtitle: "Display a profile picture or a set of initials for a user"
+		}
+	}
 };
 
 export default meta;
