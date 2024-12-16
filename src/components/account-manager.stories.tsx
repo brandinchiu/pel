@@ -1,7 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import AccountManager from "@/components/account-manager";
-import {Cog8ToothIcon, LightBulbIcon, ShieldCheckIcon, UserIcon} from "@heroicons/react/16/solid";
+import {
+	Cog8ToothIcon,
+	LightBulbIcon,
+	ShieldCheckIcon,
+	UserIcon,
+} from "@heroicons/react/16/solid";
 import React from "react";
 
 const meta: Meta<typeof AccountManager> = {
@@ -16,7 +21,7 @@ type Story = StoryObj<typeof AccountManager>;
 export const Basic: Story = {
 	args: {
 		topNavLinks: [],
-		bottomNavLinks: []
+		bottomNavLinks: [],
 	},
 };
 
@@ -29,7 +34,7 @@ export const WithUser: Story = {
 			avatar_url: "https://randomuser.me/api/portraits/women/64.jpg",
 		},
 		topNavLinks: [],
-		bottomNavLinks: []
+		bottomNavLinks: [],
 	},
 };
 
@@ -42,7 +47,7 @@ export const WithoutProfilePicture: Story = {
 			avatar_url: undefined,
 		},
 		topNavLinks: [],
-		bottomNavLinks: []
+		bottomNavLinks: [],
 	},
 };
 
@@ -58,15 +63,15 @@ export const WithTopLinks: Story = {
 			{
 				href: "/my-profile",
 				label: "My profile",
-				icon: <UserIcon />
+				icon: <UserIcon />,
 			},
 			{
 				href: "/settings",
 				label: "Settings",
 				icon: <Cog8ToothIcon />,
-			}
+			},
 		],
-		bottomNavLinks: []
+		bottomNavLinks: [],
 	},
 };
 
@@ -82,13 +87,13 @@ export const WithBottomLinks: Story = {
 			{
 				href: "/my-profile",
 				label: "My profile",
-				icon: <UserIcon />
+				icon: <UserIcon />,
 			},
 			{
 				href: "/settings",
 				label: "Settings",
 				icon: <Cog8ToothIcon />,
-			}
+			},
 		],
 		bottomNavLinks: [
 			{
@@ -101,7 +106,7 @@ export const WithBottomLinks: Story = {
 				label: "Share feedback",
 				icon: <LightBulbIcon />,
 			},
-		]
+		],
 	},
 };
 
@@ -117,13 +122,13 @@ export const FullExample: Story = {
 			{
 				href: "/my-profile",
 				label: "My profile",
-				icon: <UserIcon />
+				icon: <UserIcon />,
 			},
 			{
 				href: "/settings",
 				label: "Settings",
 				icon: <Cog8ToothIcon />,
-			}
+			},
 		],
 		bottomNavLinks: [
 			{
@@ -136,6 +141,6 @@ export const FullExample: Story = {
 				label: "Share feedback",
 				icon: <LightBulbIcon />,
 			},
-		]
+		],
 	},
 };

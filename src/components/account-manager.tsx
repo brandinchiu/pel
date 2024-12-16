@@ -12,7 +12,7 @@ import {
 import { Avatar } from "@/catalyst/avatar";
 import {
 	ArrowRightStartOnRectangleIcon,
-	ChevronUpIcon
+	ChevronUpIcon,
 } from "@heroicons/react/16/solid";
 import { SidebarItem } from "@/catalyst/sidebar";
 

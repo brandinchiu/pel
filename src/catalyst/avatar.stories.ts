@@ -8,9 +8,9 @@ const meta: Meta<typeof Avatar> = {
 	tags: ["autodocs"],
 	parameters: {
 		docs: {
-			subtitle: "Display a profile picture or a set of initials for a user"
-		}
-	}
+			subtitle: "Display a profile picture or a set of initials for a user",
+		},
+	},
 };
 
 export default meta;

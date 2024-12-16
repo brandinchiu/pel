@@ -67,7 +67,7 @@ export default function Sidebar({
 	bottomNavLinks = [],
 	user,
 	accountTopLinks = [],
-	accountBottomLinks = []
+	accountBottomLinks = [],
 }: Props) {
 	return (
 		<CatalystSidebar>

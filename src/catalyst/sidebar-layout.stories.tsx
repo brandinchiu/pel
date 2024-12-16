@@ -16,7 +16,12 @@ import {
 	UsersIcon,
 } from "@heroicons/react/20/solid";
 import React from "react";
-import {Cog8ToothIcon, LightBulbIcon, ShieldCheckIcon, UserIcon} from "@heroicons/react/16/solid";
+import {
+	Cog8ToothIcon,
+	LightBulbIcon,
+	ShieldCheckIcon,
+	UserIcon,
+} from "@heroicons/react/16/solid";
 
 const meta: Meta<typeof SidebarLayout> = {
 	title: "Catalyst/Sidebar Layout",
@@ -117,13 +122,13 @@ export const Initial: Story = {
 				{
 					href: "/my-profile",
 					label: "My profile",
-					icon: <UserIcon />
+					icon: <UserIcon />,
 				},
 				{
 					href: "/settings",
 					label: "Settings",
 					icon: <Cog8ToothIcon />,
-				}
+				},
 			],
 			accountBottomLinks: [
 				{
@@ -136,7 +141,7 @@ export const Initial: Story = {
 					label: "Share feedback",
 					icon: <LightBulbIcon />,
 				},
-			]
+			],
 		}),
 	},
 };
@@ -239,13 +244,13 @@ export const WithAWorkspace: Story = {
 				{
 					href: "/my-profile",
 					label: "My profile",
-					icon: <UserIcon />
+					icon: <UserIcon />,
 				},
 				{
 					href: "/settings",
 					label: "Settings",
 					icon: <Cog8ToothIcon />,
-				}
+				},
 			],
 			accountBottomLinks: [
 				{
@@ -258,7 +263,7 @@ export const WithAWorkspace: Story = {
 					label: "Share feedback",
 					icon: <LightBulbIcon />,
 				},
-			]
+			],
 		}),
 	},
 };
@@ -361,13 +366,13 @@ export const SidebarActiveLink: Story = {
 				{
 					href: "/my-profile",
 					label: "My profile",
-					icon: <UserIcon />
+					icon: <UserIcon />,
 				},
 				{
 					href: "/settings",
 					label: "Settings",
 					icon: <Cog8ToothIcon />,
-				}
+				},
 			],
 			accountBottomLinks: [
 				{
@@ -380,7 +385,7 @@ export const SidebarActiveLink: Story = {
 					label: "Share feedback",
 					icon: <LightBulbIcon />,
 				},
-			]
+			],
 		}),
 	},
 };
@@ -489,13 +494,13 @@ export const WithMultipleWorkspaces: Story = {
 				{
 					href: "/my-profile",
 					label: "My profile",
-					icon: <UserIcon />
+					icon: <UserIcon />,
 				},
 				{
 					href: "/settings",
 					label: "Settings",
 					icon: <Cog8ToothIcon />,
-				}
+				},
 			],
 			accountBottomLinks: [
 				{
@@ -508,7 +513,7 @@ export const WithMultipleWorkspaces: Story = {
 					label: "Share feedback",
 					icon: <LightBulbIcon />,
 				},
-			]
+			],
 		}),
 	},
 };

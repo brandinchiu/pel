@@ -14,7 +14,12 @@ import {
 	UsersIcon,
 } from "@heroicons/react/20/solid";
 import React from "react";
-import {Cog8ToothIcon, LightBulbIcon, ShieldCheckIcon, UserIcon} from "@heroicons/react/16/solid";
+import {
+	Cog8ToothIcon,
+	LightBulbIcon,
+	ShieldCheckIcon,
+	UserIcon,
+} from "@heroicons/react/16/solid";
 
 const meta: Meta<typeof Sidebar> = {
 	title: "Design System/Sidebar",
@@ -38,13 +43,13 @@ export const Initial: Story = {
 			{
 				href: "/my-profile",
 				label: "My profile",
-				icon: <UserIcon />
+				icon: <UserIcon />,
 			},
 			{
 				href: "/settings",
 				label: "Settings",
 				icon: <Cog8ToothIcon />,
-			}
+			},
 		],
 		accountBottomLinks: [
 			{
@@ -57,7 +62,7 @@ export const Initial: Story = {
 				label: "Share feedback",
 				icon: <LightBulbIcon />,
 			},
-		]
+		],
 	},
 };
 
@@ -82,13 +87,13 @@ export const WithAWorkspace: Story = {
 			{
 				href: "/my-profile",
 				label: "My profile",
-				icon: <UserIcon />
+				icon: <UserIcon />,
 			},
 			{
 				href: "/settings",
 				label: "Settings",
 				icon: <Cog8ToothIcon />,
-			}
+			},
 		],
 		accountBottomLinks: [
 			{
@@ -101,7 +106,7 @@ export const WithAWorkspace: Story = {
 				label: "Share feedback",
 				icon: <LightBulbIcon />,
 			},
-		]
+		],
 	},
 };
 
@@ -132,13 +137,13 @@ export const WithMultipleWorkspaces: Story = {
 			{
 				href: "/my-profile",
 				label: "My profile",
-				icon: <UserIcon />
+				icon: <UserIcon />,
 			},
 			{
 				href: "/settings",
 				label: "Settings",
 				icon: <Cog8ToothIcon />,
-			}
+			},
 		],
 		accountBottomLinks: [
 			{
@@ -151,7 +156,7 @@ export const WithMultipleWorkspaces: Story = {
 				label: "Share feedback",
 				icon: <LightBulbIcon />,
 			},
-		]
+		],
 	},
 };
 
@@ -194,13 +199,13 @@ export const WithTopLinks: Story = {
 			{
 				href: "/my-profile",
 				label: "My profile",
-				icon: <UserIcon />
+				icon: <UserIcon />,
 			},
 			{
 				href: "/settings",
 				label: "Settings",
 				icon: <Cog8ToothIcon />,
-			}
+			},
 		],
 		accountBottomLinks: [
 			{
@@ -213,7 +218,7 @@ export const WithTopLinks: Story = {
 				label: "Share feedback",
 				icon: <LightBulbIcon />,
 			},
-		]
+		],
 	},
 };
 
@@ -276,13 +281,13 @@ export const WithMainLinks: Story = {
 			{
 				href: "/my-profile",
 				label: "My profile",
-				icon: <UserIcon />
+				icon: <UserIcon />,
 			},
 			{
 				href: "/settings",
 				label: "Settings",
 				icon: <Cog8ToothIcon />,
-			}
+			},
 		],
 		accountBottomLinks: [
 			{
@@ -295,7 +300,7 @@ export const WithMainLinks: Story = {
 				label: "Share feedback",
 				icon: <LightBulbIcon />,
 			},
-		]
+		],
 	},
 };
 
@@ -352,13 +357,13 @@ export const WithADifferentActiveLink: Story = {
 			{
 				href: "/my-profile",
 				label: "My profile",
-				icon: <UserIcon />
+				icon: <UserIcon />,
 			},
 			{
 				href: "/settings",
 				label: "Settings",
 				icon: <Cog8ToothIcon />,
-			}
+			},
 		],
 		accountBottomLinks: [
 			{
@@ -371,7 +376,7 @@ export const WithADifferentActiveLink: Story = {
 				label: "Share feedback",
 				icon: <LightBulbIcon />,
 			},
-		]
+		],
 	},
 };
 
@@ -452,13 +457,13 @@ export const WithShortcutLinks: Story = {
 			{
 				href: "/my-profile",
 				label: "My profile",
-				icon: <UserIcon />
+				icon: <UserIcon />,
 			},
 			{
 				href: "/settings",
 				label: "Settings",
 				icon: <Cog8ToothIcon />,
-			}
+			},
 		],
 		accountBottomLinks: [
 			{
@@ -471,7 +476,7 @@ export const WithShortcutLinks: Story = {
 				label: "Share feedback",
 				icon: <LightBulbIcon />,
 			},
-		]
+		],
 	},
 };
 
@@ -514,13 +519,13 @@ export const WithBottomLinks: Story = {
 			{
 				href: "/my-profile",
 				label: "My profile",
-				icon: <UserIcon />
+				icon: <UserIcon />,
 			},
 			{
 				href: "/settings",
 				label: "Settings",
 				icon: <Cog8ToothIcon />,
-			}
+			},
 		],
 		accountBottomLinks: [
 			{
@@ -533,7 +538,7 @@ export const WithBottomLinks: Story = {
 				label: "Share feedback",
 				icon: <LightBulbIcon />,
 			},
-		]
+		],
 	},
 };
 
@@ -639,13 +644,13 @@ export const Full: Story = {
 			{
 				href: "/my-profile",
 				label: "My profile",
-				icon: <UserIcon />
+				icon: <UserIcon />,
 			},
 			{
 				href: "/settings",
 				label: "Settings",
 				icon: <Cog8ToothIcon />,
-			}
+			},
 		],
 		accountBottomLinks: [
 			{
@@ -658,6 +663,6 @@ export const Full: Story = {
 				label: "Share feedback",
 				icon: <LightBulbIcon />,
 			},
-		]
+		],
 	},
 };
