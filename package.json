@@ -1,7 +1,9 @@
 {
-  "name": "pel",
+  "name": "@misfitpixel/pel",
+  "description": "A design system based on TailwindUI's Catalyst component library",
   "version": "0.1.0",
-  "private": true,
+  "license": "MIT",
+  "repository": "https://github.com/brandinchiu/pel",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
